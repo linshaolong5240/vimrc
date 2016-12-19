@@ -20,12 +20,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 "Plugin 'vim-scripts/AutoComplPop'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'kien/ctrlp.vim'
+Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-scripts/cscope.vim'
 "Plugin 'simplyzhao/cscope_maps.vim'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'kien/ctrlp.vim'
-Plugin 'dyng/ctrlsf.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'mbriggs/mark.vim'
 Plugin 'vim-scripts/minibufexplorerpp'
 Plugin 'terryma/vim-multiple-cursors'
@@ -41,7 +43,8 @@ Plugin 'justinmk/vim-syntax-extra'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
 
-
+"for python
+Plugin 'davidhalter/jedi'
 
 
 
@@ -156,6 +159,9 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 "}
 "{rainbow settings
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
+"}
+"{Tagbar setting
+noremap <leader>tb :TagbarToggle
 "}
 "{YouCompleteMe setting
 "let g:ycm_server_python_interpreter = '/usr/local/bin/python'
