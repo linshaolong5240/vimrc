@@ -25,9 +25,7 @@ Plugin 'dyng/ctrlsf.vim'
 Plugin 'vim-scripts/cscope.vim'
 "Plugin 'simplyzhao/cscope_maps.vim'
 Plugin 'easymotion/vim-easymotion'
-Plugin 'mattn/emmet-vim'
 Plugin 'Yggdroot/indentLine'
-Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'mbriggs/mark.vim'
 Plugin 'vim-scripts/minibufexplorerpp'
 Plugin 'terryma/vim-multiple-cursors'
@@ -42,9 +40,17 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'justinmk/vim-syntax-extra'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'rdnetto/YCM-Generator'
+"
+"Plugin 'spolu/dwm.vim'
 
 "for python
 Plugin 'davidhalter/jedi'
+"for web
+Plugin 'mattn/emmet-vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
+
+"Theme
+Plugin 'dracula/vim'
 
 
 
@@ -80,10 +86,11 @@ filetype plugin indent on    " required
 "
 "
 "{Theme setting
+color dracula
 "colorscheme molokai
 "colorscheme Tomorrow-Night
 "colorscheme Tomorrow-Night-Eighties
-colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright
 "colorscheme Twilight
 "colorscheme wombat
 "colorscheme wombat256mod
@@ -161,10 +168,10 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 "}
 "{Tagbar setting
-noremap <leader>tb :TagbarToggle
+noremap <leader>tb :TagbarToggle<CR>
 "}
 "{YouCompleteMe setting
-"let g:ycm_server_python_interpreter = '/usr/local/bin/python'
+let g:ycm_server_python_interpreter = 'python'
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_auto_trigger = 1 "YCM on/off
 let g:ycm_autoclose_preview_window_after_completion=1
