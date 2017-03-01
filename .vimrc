@@ -66,8 +66,8 @@ nnoremap <leader>qa :qa<CR>
 nnoremap <leader>b :b
 "}
 
-if has('win')
-    call plug#begin('D:\Users\Mark\vimfiles\autoload\plugged')
+if has('win32')
+    call plug#begin('D:\Users\Mark\vimfiles\plugged')
 else
     call plug#begin('~/.vim/plugged')
 endif
@@ -112,10 +112,8 @@ call plug#end()
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 "airline setting
 "{
-if has('win')
+if has('win32')
     set guifont=Hack:h10
-    set t_Co=256
-    let g:airline_powerline_fonts = 1
 else
     set guifont=Hack_Regular:h10
 endif
@@ -209,7 +207,7 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 "{CtrlP settings
 "let g:ctrlp_working_path_mode = 0
-set wildignore+=*/Bin/*,*/Lst/*,*/*env,
+set wildignore+=*/Bin/*,*/Lst/*,*/*venv,
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:99'
 "}
 
@@ -345,8 +343,8 @@ let g:ycm_filetype_blacklist = {
 "let g:ycm_python_binary_path='/usr/bin/python'
 "let g:ycm_python_binary_path='C:/MySoftware/Python27/python'
 "let g:ycm_python_binary_path='/usr/bin/python3'
-let g:ycm_python_binary_path='python'
-if has('win')
+let g:ycm_python_binary_path='python3'
+if has('win32')
     let g:ycm_global_ycm_extra_conf='D:/Users/Mark/.ycm_extra_conf.py'
 endif
 " disable boring syntax check
