@@ -67,7 +67,7 @@ nnoremap <leader>b :b
 "}
 
 if has('win32')
-    call plug#begin('D:\Users\Mark\vimfiles\plugged')
+    call plug#begin('$HOME\vimfiles\plugged')
 else
     call plug#begin('~/.vim/plugged')
 endif
@@ -280,7 +280,7 @@ nnoremap <F12> :GenCtags<CR>
 "
 "{NERDTree settings
 nnoremap <leader>e :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.vim$', '\~$', '\.pyc$', '__pycache__$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\venv$', '\.pyc$', '__pycache__$']
 "}
 "
 "python-syntax
@@ -343,9 +343,9 @@ let g:ycm_filetype_blacklist = {
 "let g:ycm_python_binary_path='/usr/bin/python'
 "let g:ycm_python_binary_path='C:/MySoftware/Python27/python'
 "let g:ycm_python_binary_path='/usr/bin/python3'
-let g:ycm_python_binary_path='python3'
+let g:ycm_python_binary_path='python'
 if has('win32')
-    let g:ycm_global_ycm_extra_conf='D:/Users/Mark/.ycm_extra_conf.py'
+    let g:ycm_global_ycm_extra_conf='$HOME\.ycm_extra_conf.py'
 endif
 " disable boring syntax check
 let g:ycm_show_diagnostics_ui=0
