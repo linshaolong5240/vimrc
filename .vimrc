@@ -206,8 +206,10 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 "}
 
 "{CtrlP settings
-"let g:ctrlp_working_path_mode = 0
-set wildignore+=*/Bin/*,*/Lst/*,*/*venv,
+  let g:ctrlp_custom_ignore = {
+    \ 'dir':  '\v[\/]\(bin|lst|venv|__pycache__)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+    \ }
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:99'
 "}
 
@@ -280,7 +282,7 @@ nnoremap <F12> :GenCtags<CR>
 "
 "{NERDTree settings
 nnoremap <leader>e :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.vim$', '\~$', '\venv$', '\.pyc$', '__pycache__$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\venv$', '\.pyc$', '\__pycache__$']
 "}
 "
 "python-syntax
