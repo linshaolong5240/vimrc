@@ -48,20 +48,6 @@ set shiftwidth=4
 set softtabstop=4
 set backspace=indent,eol,start
 
-"key mapping
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
-
-nnoremap <leader>wh <C-w>h
-nnoremap <leader>wj <C-w>j
-nnoremap <leader>wk <C-w>k
-nnoremap <leader>wl <C-w>l
-nnoremap <leader>w :w<CR>
-nnoremap <leader>wa :wa<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>qa :qa<CR>
 "}
 
 if has('win32')
@@ -369,8 +355,18 @@ let g:ycm_cache_omnifunc=0
 nnoremap<leader>gl :YcmCompleter GoToDeclaration<CR>
 nnoremap<leader>gf :YcmCompleter GoToDefinition<CR>
 nnoremap<leader>gg :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+"mac settting
 if has('mac')
     "backspace set up for mac
     set backspace=indent,eol,start
 endif
+
+"custom key mapping
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+nnoremap <leader>w :w<CR>
+nnoremap <leader>wa :wa<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>qa :qa<CR>
