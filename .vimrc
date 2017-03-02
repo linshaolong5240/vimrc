@@ -54,16 +54,14 @@ set backspace=indent,eol,start
 "nnoremap <C-k> <C-w>k
 "nnoremap <C-l> <C-w>l
 
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
 nnoremap <leader>w :w<CR>
 nnoremap <leader>wa :wa<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
-
-nnoremap <leader>b :b
 "}
 
 if has('win32')
@@ -132,7 +130,7 @@ nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
 nmap <leader>- <Plug>AirlineSelectPrevTab
-nmap <leader>+ <Plug>AirlineSelectNextTab
+nmap <leader>= <Plug>AirlineSelectNextTab
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -206,10 +204,11 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 "}
 
 "{CtrlP settings
-  let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\(bin|lst|venv|__pycache__)$',
-    \ 'file': '\v\.(exe|so|dll)$',
-    \ }
+let g:ctrlp_custom_ignore = {
+            \ 'dir':  '\v[\/](bin|lst|venv|__pycache__)$',
+            \ 'file': '\v\.(exe|so|dll)$',
+            \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
+            \ }
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:99'
 "}
 
@@ -282,7 +281,7 @@ nnoremap <F12> :GenCtags<CR>
 "
 "{NERDTree settings
 nnoremap <leader>e :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.vim$', '\~$', '\venv$', '\.pyc$', '\__pycache__$']
+let NERDTreeIgnore=['\.vim$', '\~$', 'venv$', '__pycache__$']
 "}
 "
 "python-syntax
