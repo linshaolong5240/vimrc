@@ -141,7 +141,8 @@ let g:airline#extensions#tabline#right_alt_sep = ''
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 " 让配置变更立即生效
-color dracula
+colorscheme dracula
+"colorscheme gruvbox
 "colorscheme molokai
 "colorscheme Tomorrow-Night
 "colorscheme Tomorrow-Night-Eighties
