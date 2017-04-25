@@ -76,7 +76,8 @@ Plug 'easymotion/vim-easymotion'
 "for complete
 Plug 'brookhong/cscope.vim'
 Plug 'jsfaint/gen_tags.vim'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
+Plug 'vim-scripts/AutoComplPop'
 
 "for edit
 Plug 'terryma/vim-multiple-cursors'
@@ -115,8 +116,10 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-"nmap <leader>- <Plug>AirlineSelectPrevTab
-"nmap <leader>= <Plug>AirlineSelectNextTab
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>= <Plug>AirlineSelectNextTab
+
+nmap <leader>b :bd<CR>
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -137,6 +140,9 @@ let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 "}
+"
+"AutoComplPop
+let g:acp_behaviorKeywordLength = 1  
 
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
@@ -153,7 +159,6 @@ colorscheme dracula
 "colorscheme desert
 
 "{cscope setting
-set cscopequickfix=s-,c-,d-,i-,t-,e-
 "<C-]> 不会应为cscope 存在而直接跳转，会显示列表选择
 set cscopetag " 使支持用 Ctrl+]  和 Ctrl+t 快捷键在代码间跳来跳去
 "显示路径层数
@@ -203,19 +208,19 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:99'
 "let g:ctrlsf_position = 'bottom'
 let g:ctrlsf_default_root = 'project+ww'
 let g:ctrlsf_extra_backend_args = {
-    \ 'ag': '--cc --cpp --python'
+    \ 'ag': '--cc --cpp --python --html --css'
     \ }
-nmap     <C-s>f <Plug>CtrlSFPrompt
-vmap     <C-s>f <Plug>CtrlSFVwordPath
-vmap     <C-s>F <Plug>CtrlSFVwordExec
-nmap     <C-s>n <Plug>CtrlSFCwordPath
-nmap     <C-s>p <Plug>CtrlSFPwordPath
-nnoremap <C-s>o :CtrlSFOpen<CR>
-nnoremap <C-s>t :CtrlSFToggle<CR>
-inoremap <C-s>t <Esc>:CtrlSFToggle<CR>
-nmap     <C-s>l <Plug>CtrlSFQuickfixPrompt
-vmap     <C-s>l <Plug>CtrlSFQuickfixVwordPath
-vmap     <C-s>L <Plug>CtrlSFQuickfixVwordExec
+nmap     <leader>sf <Plug>CtrlSFPrompt
+vmap     <leader>sf <Plug>CtrlSFVwordPath
+vmap     <leader>sF <Plug>CtrlSFVwordExec
+nmap     <leader>sn <Plug>CtrlSFCwordPath
+nmap     <leader>sp <Plug>CtrlSFPwordPath
+nnoremap <leader>so :CtrlSFOpen<CR>
+nnoremap <leader>st :CtrlSFToggle<CR>
+inoremap <leader>st <Esc>:CtrlSFToggle<CR>
+nmap     <leader>sl <Plug>CtrlSFQuickfixPrompt
+vmap     <leader>sl <Plug>CtrlSFQuickfixVwordPath
+vmap     <leader>sL <Plug>CtrlSFQuickfixVwordExec
 let g:ctrlsf_mapping = {
             \ "next": "n",
             \ "prev": "N",
@@ -363,6 +368,8 @@ if has('mac')
 endif
 
 "custom key mapping
+nnoremap <C-f> <C-d>
+nnoremap <C-b> <C-u>
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
 nnoremap <leader>k <C-w>k
@@ -375,3 +382,4 @@ nnoremap <leader>=  :resize +3<CR>
 nnoremap <leader>-  :resize -3<CR>
 nnoremap <leader>,  :vertical resize -3<CR>
 nnoremap <leader>.  :vertical resize +3<CR>
+nnoremap <leader>nhl    :nohighlight<CR>
