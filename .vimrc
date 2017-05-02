@@ -58,8 +58,7 @@ endif
 
 "for UI
 Plug 'scrooloose/nerdtree'
-Plug 'flazz/vim-colorschemes'
-Plug 'dracula/vim'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
@@ -147,8 +146,8 @@ let g:acp_behaviorKeywordLength = 1
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 " 让配置变更立即生效
-colorscheme dracula
-"colorscheme gruvbox
+"colorscheme dracula
+colorscheme gruvbox
 "colorscheme molokai
 "colorscheme Tomorrow-Night
 "colorscheme Tomorrow-Night-Eighties
