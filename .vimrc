@@ -15,7 +15,7 @@ set ruler
 " 开启行号显示
 set number
 " 高亮显示当前行/列
-"set cursorline
+set cursorline
 "set cursorcolumn
 "高亮搜索
 set hlsearch
@@ -77,6 +77,7 @@ Plug 'brookhong/cscope.vim'
 Plug 'jsfaint/gen_tags.vim'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/AutoComplPop'
+Plug 'davidhalter/jedi-vim'
 
 "for edit
 Plug 'terryma/vim-multiple-cursors'
@@ -97,7 +98,7 @@ call plug#end()
 "airline setting
 "{
 if has('win32')
-    set guifont=Hack:h10
+    set guifont=DejaVu_Sans_Mono_for_Powerline:h11
 else
     set guifont=Hack_Regular:h10
 endif
@@ -377,8 +378,8 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>wa :wa<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
-nnoremap <leader>=  :resize +3<CR>
-nnoremap <leader>-  :resize -3<CR>
+nnoremap <leader>w=  :resize +3<CR>
+nnoremap <leader>w-  :resize -3<CR>
 nnoremap <leader>,  :vertical resize -3<CR>
 nnoremap <leader>.  :vertical resize +3<CR>
-nnoremap <leader>nhl    :nohighlight<CR>
+nnoremap <leader>nh :nohl<CR>
