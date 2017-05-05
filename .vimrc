@@ -8,6 +8,8 @@ set nowritebackup
 let mapleader="\<Space>"
 "use the clipboard register '*'
 set clipboard=unnamed
+"黑色背景
+set background=dark
 " 总是显示状态栏
 set laststatus=2
 " 显示光标当前位置
