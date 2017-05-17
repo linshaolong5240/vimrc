@@ -370,6 +370,7 @@ if has('mac')
 endif
 
 "custom key mapping
+inoremap jj <Esc>
 nnoremap <C-f> <C-d>
 nnoremap <C-b> <C-u>
 nnoremap <leader>h <C-w>h
