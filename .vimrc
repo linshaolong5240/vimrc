@@ -68,6 +68,7 @@ Plug 'mbriggs/mark.vim'
 Plug 'luochen1990/rainbow'
 Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
+Plug 'justinmk/vim-syntax-extra'
 
 "for search
 Plug 'kien/ctrlp.vim'
