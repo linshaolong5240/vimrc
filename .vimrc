@@ -100,11 +100,7 @@ call plug#end()
 "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 "airline setting
 "{
-if has('win32')
-    set guifont=DejaVu_Sans_Mono_for_Powerline:h11
-else
-    set guifont=Hack_Regular:h10
-endif
+set guifont=DejaVu_Sans_Mono_for_Powerline:h11
 
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
