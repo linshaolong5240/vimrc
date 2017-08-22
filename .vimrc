@@ -70,6 +70,7 @@ Plug 'kshenoy/vim-signature'
 Plug 'majutsushi/tagbar'
 Plug 'justinmk/vim-syntax-extra'
 
+
 "for search
 Plug 'kien/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
@@ -91,6 +92,7 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 
 "for web
+Plug 'Valloric/MatchTagAlways'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'mattn/emmet-vim'
 
@@ -269,6 +271,9 @@ nnoremap <F12> :GenCtags<CR>
 "Ctrl+\ i    Find files #including this file
 "Ctrl+\ s    Find this C symbol
 "Ctrl+\ t    Find this text string
+"
+"MatchTagAlways
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
 "
 "{NERDTree settings
 nnoremap <leader>e :NERDTreeToggle<CR>
