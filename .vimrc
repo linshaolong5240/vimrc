@@ -277,7 +277,7 @@ nnoremap <leader>% :MtaJumpToOtherTag<cr>
 "
 "{NERDTree settings
 nnoremap <leader>e :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.vim$', '\~$', 'venv$', '__pycache__$']
+let NERDTreeIgnore=['\.vim$', '\~$', 'venv$', '__pycache__$', 'migrations']
 "}
 "
 "python-syntax
