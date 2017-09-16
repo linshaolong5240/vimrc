@@ -198,7 +198,7 @@ nnoremap  <leader>fi :call CscopeFind('i', expand('<cword>'))<CR>
 
 "{CtrlP settings
 let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/](bin|lst|venv|__pycache__)$',
+            \ 'dir':  '\v[\/](bin|lst|venv|__pycache__|migrations)$',
             \ 'file': '\v\.(exe|so|dll)$',
             \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
             \ }
