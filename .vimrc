@@ -58,38 +58,46 @@ else
     call plug#begin('~/.vim/plugged')
 endif
 
-"for UI
-Plug 'scrooloose/nerdtree'
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"for align
 Plug 'Yggdroot/indentLine'
-Plug 'mbriggs/mark.vim'
-Plug 'luochen1990/rainbow'
-Plug 'kshenoy/vim-signature'
-Plug 'majutsushi/tagbar'
-Plug 'justinmk/vim-syntax-extra'
-
-
-"for search
-Plug 'kien/ctrlp.vim'
-Plug 'dyng/ctrlsf.vim'
-Plug 'easymotion/vim-easymotion'
+Plug 'godlygeek/tabular'
 
 "for complete
 Plug 'brookhong/cscope.vim'
 Plug 'jsfaint/gen_tags.vim'
-"Plug 'Valloric/YouCompleteMe'
 Plug 'vim-scripts/AutoComplPop'
-Plug 'davidhalter/jedi-vim'
+"Plug 'Valloric/YouCompleteMe'
 
 "for edit
 Plug 'terryma/vim-multiple-cursors'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 
-"for align
-Plug 'godlygeek/tabular'
+"for mark
+Plug 'mbriggs/mark.vim'
+Plug 'kshenoy/vim-signature'
+
+"for python
+Plug 'davidhalter/jedi-vim'
+
+"for search
+Plug 'kien/ctrlp.vim'
+Plug 'dyng/ctrlsf.vim'
+Plug 'easymotion/vim-easymotion'
+
+"for syntax
+Plug 'justinmk/vim-syntax-extra'
+
+"for theme
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'scrooloose/nerdtree'
+"Plug 'dracula/vim'
+
+"for UI
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'luochen1990/rainbow'
+Plug 'majutsushi/tagbar'
 
 "for web
 Plug 'Valloric/MatchTagAlways'
@@ -147,7 +155,6 @@ let g:acp_behaviorKeywordLength = 1
 
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
 "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
-" 让配置变更立即生效
 "colorscheme dracula
 colorscheme gruvbox
 "colorscheme molokai
@@ -318,6 +325,13 @@ let g:rainbow_active = 1 "0 if you want to enable it later via :RainbowToggle
 " [=           Jump to prev line having a marker of any type
 " m?           Open location list and display markers from current buffer
 " m<BS>        Remove all markers
+"
+"
+"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+"
+"tabularize
+
 
 "{tagbar setting
 nnoremap <leader>tb :TagbarToggle<CR>
@@ -383,8 +397,9 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>wa :wa<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>qa :qa<CR>
-nnoremap <leader>w=  :resize +3<CR>
-nnoremap <leader>w-  :resize -3<CR>
+nnoremap <leader>=  :resize +3<CR>
+nnoremap <leader>-  :resize -3<CR>
 nnoremap <leader>,  :vertical resize -3<CR>
 nnoremap <leader>.  :vertical resize +3<CR>
 nnoremap <leader>nh :nohl<CR>
+vnoremap <leader>a= :Tabularize /^[^=]*\zs<CR>
